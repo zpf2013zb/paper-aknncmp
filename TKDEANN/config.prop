@@ -1,0 +1,30 @@
+DBASE=map/
+
+
+// for HiTi graph only
+//rhiti=data/SF_dnw.cht10
+//rhiti=data/OL_dnw.cht8
+
+// data and rtree node files
+data=sf_d01
+query=SF_m8_p04
+
+
+//data=cn_hs
+//data=de_py
+//data=OL_dij
+
+
+//edgert=SF_dnw
+
+
+// NNum=1 for center query !
+
+// default: 10
+NNnum=10
+qryskew=0
+
+
+
+//generator=data
+generator=query

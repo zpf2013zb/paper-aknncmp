@@ -1,0 +1,135 @@
+./gnn -query SF_m8_p04 -data SF_W1d125 > outdata
+
+./gnn -query SF_m8_p04 -data SF_W1d25 >> outdata
+
+./gnn -query SF_m8_p04 -data SF_W1d5 >> outdata
+
+./gnn -query SF_m8_p04 -data SF_W2 >> outdata
+------------------------------------------------
+./gnn -query SF_m8_p04 -data SFE_0d1 > outdata
+
+./gnn -query SF_m8_p04 -data SFD_0d5 >> outdata
+
+./gnn -query SF_m8_p04 -data SFD_1 >> outdata
+
+./gnn -query SF_m8_p04 -data SFD_5 >> outdata
+
+./gnn -query SF_m8_p04 -data SFD_10 >> outdata
+------------------------------------------------
+./gnn -query SF_m8_p04 -NNnum 1 > outdata
+
+./gnn -query SF_m8_p04 -NNnum 10 >> outdata
+
+./gnn -query SF_m8_p04 -NNnum 100 >> outdata
+
+./gnn -query SF_m8_p04 -NNnum 1000 >> outdata
+------------------------------------------------
+./gnn -query SF_m8_p01 > outdata
+
+./gnn -query SF_m8_p02 >> outdata
+
+./gnn -query SF_m8_p04 >> outdata
+
+./gnn -query SF_m8_p08 >> outdata
+
+./gnn -query SF_m8_p16 >> outdata
+------------------------------------------------
+./gnn -query SF_m4_p04  > outdata
+
+./gnn -query SF_m8_p04  >> outdata
+
+./gnn -query SF_m16_p04  >> outdata
+
+./gnn -query SF_m32_p04  >> outdata
+
+./gnn -query SF_m64_p04  >> outdata
+------------------------------------------------
+./gnn -qryskew 0.2 > outdata
+
+./gnn -qryskew 0.4 >> outdata
+ 
+./gnn -qryskew 0.6 >> outdata
+ 
+./gnn -qryskew 0.8 >> outdata
+ 
+./gnn -qryskew 1.0 >> outdata
+
+
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+./topk -query SF_m8_p04 -data SF_W1d125 > outdata
+
+./topk -query SF_m8_p04 -data SF_W1d25 >> outdata
+
+./topk -query SF_m8_p04 -data SF_W1d5 >> outdata
+
+./topk -query SF_m8_p04 -data SF_W2 >> outdata
+------------------------------------------------
+./topk -query SF_m8_p04 -data SFE_0d1 > outdata
+
+./topk -query SF_m8_p04 -data SFD_0d5 >> outdata
+
+./topk -query SF_m8_p04 -data SFD_1 >> outdata
+
+./topk -query SF_m8_p04 -data SFD_5 >> outdata
+
+./topk -query SF_m8_p04 -data SFD_10 >> outdata
+------------------------------------------------
+./topk -query SF_m8_p04 -NNnum 1 > outdata
+
+./topk -query SF_m8_p04 -NNnum 10 >> outdata
+
+./topk -query SF_m8_p04 -NNnum 100 >> outdata
+
+./topk -query SF_m8_p04 -NNnum 1000 >> outdata
+------------------------------------------------
+./topk -query SF_m8_p01 > outdata
+
+./topk -query SF_m8_p02 >> outdata
+
+./topk -query SF_m8_p04 >> outdata
+
+./topk -query SF_m8_p08 >> outdata
+
+./topk -query SF_m8_p16 >> outdata
+------------------------------------------------
+./topk -query SF_m4_p04  > outdata
+
+./topk -query SF_m8_p04  >> outdata
+
+./topk -query SF_m16_p04  >> outdata
+
+./topk -query SF_m32_p04  >> outdata
+
+./topk -query SF_m64_p04  >> outdata
+------------------------------------------------
+./topk -qryskew 0.2 > outdata
+
+./topk -qryskew 0.4 >> outdata
+ 
+./topk -qryskew 0.6 >> outdata
+ 
+./topk -qryskew 0.8 >> outdata
+ 
+./topk -qryskew 1.0 >> outdata
+
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+./gnn -data NAE_0d1 -query NA_m8_p04B  > outdata
+
+./gnn -data TGE_0d1 -query TG_m8_p04  >> outdata
+
+./gnn -data OLE_0d1 -query OL_m8_p04  >> outdata
+
+./gnn -data CN_hs -query CN_m8_p04  >> outdata
+
+./topk -data NAE_0d1 -query NA_m8_p04B  > outdata
+
+./topk -data TGE_0d1 -query TG_m8_p04  >> outdata
+
+./topk -data OLE_0d1 -query OL_m8_p04  >> outdata
+
+./topk -data CN_hs -query CN_m8_p04  >> outdata

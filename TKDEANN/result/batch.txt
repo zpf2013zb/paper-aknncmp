@@ -1,0 +1,273 @@
+==========
+Plot graph
+==========
+
+
+set logscale y
+
+
+cd '\cygwin\home\mlyiu2\groupnn\result'
+
+
+set ylabel "I/O"
+set xlabel "F"
+set yrange [0:2000]
+
+plot \
+"IO_FL.exp" using 1:2 title "CE,sum" with linespoints , \
+"IO_FL.exp" using 1:3 title "TA,sum" with linespoints , \
+"IO_FL.exp" using 1:4 title "IER,sum" with linespoints , \
+"IO_FL.exp" using 1:5 title "CE,max" with linespoints , \
+"IO_FL.exp" using 1:6 title "TA,max" with linespoints , \
+"IO_FL.exp" using 1:7 title "IER,max" with linespoints
+
+
+set ylabel "Execution time (s)"
+set xlabel "F"
+set yrange [0:20]
+
+plot \
+"TimeFL.exp" using 1:2 title "CE,sum" with linespoints , \
+"TimeFL.exp" using 1:3 title "TA,sum" with linespoints , \
+"TimeFL.exp" using 1:4 title "IER,sum" with linespoints , \
+"TimeFL.exp" using 1:5 title "CE,max" with linespoints , \
+"TimeFL.exp" using 1:6 title "TA,max" with linespoints , \
+"TimeFL.exp" using 1:7 title "IER,max" with linespoints
+
+==========================================================
+
+set ylabel "Execution time (s)"
+set xlabel "Spread"
+set yrange [0:75]
+
+plot \
+"TimeSpread.exp" using 1:2 title "CE,sum" with linespoints , \
+"TimeSpread.exp" using 1:3 title "TA,sum" with linespoints , \
+"TimeSpread.exp" using 1:4 title "IER,sum" with linespoints , \
+"TimeSpread.exp" using 1:5 title "CE,max" with linespoints , \
+"TimeSpread.exp" using 1:6 title "TA,max" with linespoints , \
+"TimeSpread.exp" using 1:7 title "IER,max" with linespoints
+
+==========================================================
+
+
+set ylabel "Execution time (s)"
+set xlabel "Memory buffer size (%)"
+set yrange [0:16]
+
+plot \
+"TimeBuf.exp" using 1:2 title "CE,sum" with linespoints , \
+"TimeBuf.exp" using 1:3 title "TA,sum" with linespoints , \
+"TimeBuf.exp" using 1:4 title "IER,sum" with linespoints , \
+"TimeBuf.exp" using 1:5 title "CE,max" with linespoints , \
+"TimeBuf.exp" using 1:6 title "TA,max" with linespoints , \
+"TimeBuf.exp" using 1:7 title "IER,max" with linespoints
+
+==========================================================
+
+
+set ylabel "Execution time (s)"
+set xlabel "k"
+set yrange[0:20]  
+set logscale x
+
+plot \
+"TimeK.exp" using 1:2 title "CE,sum" with linespoints , \
+"TimeK.exp" using 1:3 title "TA,sum" with linespoints , \
+"TimeK.exp" using 1:4 title "IER,sum" with linespoints , \
+"TimeK.exp" using 1:5 title "CE,max" with linespoints , \
+"TimeK.exp" using 1:6 title "TA,max" with linespoints , \
+"TimeK.exp" using 1:7 title "IER,max" with linespoints
+
+==========================================================
+
+
+set ylabel "Execution time (s)"
+set xlabel "e/W"
+set logscale x
+set yrange[0:20]
+
+plot \
+"TimeG.exp" using 1:2 title "CE,sum" with linespoints , \
+"TimeG.exp" using 1:3 title "TA,sum" with linespoints , \
+"TimeG.exp" using 1:4 title "IER,sum" with linespoints , \
+"TimeG.exp" using 1:5 title "CE,max" with linespoints , \
+"TimeG.exp" using 1:6 title "TA,max" with linespoints , \
+"TimeG.exp" using 1:7 title "IER,max" with linespoints
+
+==========================================================
+
+#set yrange[0:14]
+
+
+set ylabel "Execution time (s)"
+set xlabel "Weight skewness"
+set yrange[0:65]
+
+
+plot \
+"TimeSkew.exp" using 1:2 title "CE,sum" with linespoints , \
+"TimeSkew.exp" using 1:3 title "TA,sum" with linespoints , \
+"TimeSkew.exp" using 1:4 title "IER,sum" with linespoints , \
+"TimeSkew.exp" using 1:5 title "CE,max" with linespoints , \
+"TimeSkew.exp" using 1:6 title "TA,max" with linespoints , \
+"TimeSkew.exp" using 1:7 title "IER,max" with linespoints
+
+==========================================================
+
+set ylabel "Execution time (s)"
+set xlabel "|Q|"
+set nologscale x
+set yrange[0:320]
+
+plot \
+"TimeQ.exp" using 1:2 title "CE,sum" with linespoints , \
+"TimeQ.exp" using 1:3 title "TA,sum" with linespoints , \
+"TimeQ.exp" using 1:4 title "IER,sum" with linespoints , \
+"TimeQ.exp" using 1:5 title "CE,max" with linespoints , \
+"TimeQ.exp" using 1:6 title "TA,max" with linespoints , \
+"TimeQ.exp" using 1:7 title "IER,max" with linespoints
+
+==========================================================
+
+set ylabel "Execution time (s)"
+set xlabel "A (%)"
+set yrange[0:35]
+
+plot \
+"TimeA.exp" using 1:2 title "CE,sum" with linespoints , \
+"TimeA.exp" using 1:3 title "TA,sum" with linespoints , \
+"TimeA.exp" using 1:4 title "IER,sum" with linespoints , \
+"TimeA.exp" using 1:5 title "CE,max" with linespoints , \
+"TimeA.exp" using 1:6 title "TA,max" with linespoints , \
+"TimeA.exp" using 1:7 title "IER,max" with linespoints
+
+==========================================================
+
+
+
+============
+Plot network
+============
+
+1) Use red for the lines of the network
+2) Use black for the points
+3) Use other colors for the discovered clusters.
+4) use different color for plotting the points
+5) use smaller point size if possible
+
+For our cost comparison experiments, use sanfransisco and 500K points.
+
+
+plot [4000:7000][3000:0] "OL.net" with lines, "testX.pdat" with points 8
+
+
+plot [0:10000][10000:0] "OL.net" with lines, "O_C10_D20K_S1.pdat" with points 8 1
+
+plot [0:10000][10000:0] "OL.net" with lines, "O_HC_D20K_S1.pdat" with points 8
+
+plot [0:10000][10000:0] "test.txt" notitle with points, \
+"test2.txt" notitle with points
+
+
+
+plot [0:10000][0:10000] "data.txt" notitle with points
+plot "data.txt" notitle with points
+
+
+// for oldenburg and other 3 datasets
+plot [0:10000][10000:0] "OL.net" notitle with lines
+
+// for northwest road in North America
+plot [0:10000][0:10000] "NA.net" notitle with lines
+
+
+plot [0:10000][10000:0] "OL.net" notitle with lines, \
+"O_C10_D20K_S1.pdat" with points 8 8
+
+cd '/cygwin/home/mlyiu2/groupnn/visual' ;
+set size square ;
+set noxtics ;
+set noytics ;
+set pointsize 0.5
+
+plot [0:10000][10000:0] "OL.net" notitle with lines 9, \
+"outpt.odat" notitle with points 8 8, \
+"outpt.pdat0" notitle with points 3 8, \
+"outpt.pdat1" notitle with points 1 8
+
+
+
+cd '/cygwin/home/mlyiu2/groupnn/visual'
+
+set noborder;
+set noxtics;
+set noytics;
+
+
+lines 9, 3 ,1 
+plot in color mode !!!
+
+
+start,end=(4523.3 4498.4) (5497.8 5503.7)
+
+set label "src." at 4523.3,4498.4;
+set label "dest." at 5497.8,5503.7;
+
+plot [2500:6500][6500:2500] "OL.net" notitle with lines 9, \
+"OLE_0d1.pdat" notitle with lines 8 8
+
+
+plot [0:10000][0:10000] "cnrail.net" notitle with lines 9, \
+"cnrailhs.pdat" notitle with points 8 8
+
+
+plot [0:10000][0:10000] "cnrail.net" notitle with lines 9, \
+"cnrailppl.pdat" notitle with points 8 8
+
+
+plot [0:10000][0:10000] "TG.net" notitle with lines 9, \
+"TC_0d1.pdat" notitle with points 1 1
+
+
+black=8
+
+with points 8 0 (dot)
+with points 8 1 (diamond)
+
+set terminal postscript eps
+set output "vis.eps"
+replot
+set output
+set terminal x11
+
+Combined: ...
+plot 'world.dat' with lines 3 4, 'world.cor' with points 1 2
+
+
+Put your points in "test.txt" in <x,y> coordinates.
+For line segments, I'm not sure how you can do it.
+
+
+For line segments
+
+
+blocks of data (line, or polygon), "separated" by one blank line. 
+The number of (X,Y) pairs are different for the each data block. 
+
+
+Format:
+x1 y1 
+x2 y2
+
+x1 y1 
+x2 y2
+
+x1 y1 
+x2 y2
+
+...
+
+plot "data.txt" notitle with lines
+
+
